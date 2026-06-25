@@ -147,6 +147,68 @@
             left: -20vw;
         }
 
+        
+        /* ============================================
+           ANIMATIONS & PRO INTERACTIONS
+           ============================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hover-glow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(41, 151, 255, 0.15);
+            border-color: var(--accent);
+        }
+
+        /* Animated Aurora Gradients */
+        @keyframes aurora {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero {
+            background: linear-gradient(-45deg, var(--bg-primary), var(--bg-secondary), rgba(41, 151, 255, 0.05), var(--bg-primary));
+            background-size: 400% 400%;
+            animation: aurora 15s ease infinite;
+        }
+
+        /* Advanced Button Interactions */
+        .btn-primary {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%);
+            transition: 0.6s;
+            z-index: -1;
+        }
+        .btn-primary:hover::after {
+            transform: translateX(100%);
+        }
+        
+        .contact-form .btn {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        .contact-form .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
         /* ============================================
            NAVBAR
            ============================================ */
@@ -895,7 +957,7 @@
         <a href="#contact" class="mobile-link">Contact</a>
     </div>
 
-    <section class="hero" id="hero">
+    <section class="hero reveal" id="hero">
         <div class="container">
             <div class="hero-badge">
                 <i class="fa-solid fa-circle"></i> Available for Custom Web Framework Design
@@ -930,7 +992,7 @@
         </div>
     </section>
 
-    <section class="brands">
+    <section class="brands reveal">
         <div class="marquee">
             <div class="marquee-content">
                 <div class="brand-item"><i class="fa-solid fa-bolt"></i> Alpha Tech</div>
@@ -949,7 +1011,36 @@
         </div>
     </section>
 
-    <section class="services" id="services">
+    <section class="about reveal" id="about" style="background: var(--bg-primary); padding: 100px 0; border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr; gap: 60px; align-items: center;">
+                <div class="about-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <div class="section-label" style="display: inline-flex; justify-content: center; margin-bottom: 15px;">Meet The Engine</div>
+                    <h2 class="section-title" style="margin-bottom: 24px;">Vaishnavi & The Elite Tech Team</h2>
+                    <p style="color: var(--text-secondary); font-size: 1.15rem; line-height: 1.7; margin-bottom: 30px;">
+                        Behind every great digital experience is a dedicated team of elite developers and system architects. Led by <strong>Vaishnavi</strong>, our tech team doesn't just write code—we engineer scalable, high-end digital products.
+                    </p>
+                    <p style="color: var(--text-secondary); font-size: 1.15rem; line-height: 1.7; margin-bottom: 40px;">
+                        Whether you need a simple landing page, a complex corporate web application, or a fully functional e-commerce ecosystem, we have the technical firepower to build exactly what you imagine. <strong style="color: var(--text-primary);">You dream it, we build it.</strong>
+                    </p>
+                    <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
+                        <div style="background: var(--bg-card); padding: 20px 30px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); text-align: center; transition: all var(--transition);" class="hover-glow">
+                            <i class="fa-solid fa-laptop-code" style="font-size: 2rem; color: var(--accent); margin-bottom: 10px;"></i>
+                            <h4 style="color: var(--text-primary); margin-bottom: 5px;">Any Tech Stack</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">React, Node, Python & More</p>
+                        </div>
+                        <div style="background: var(--bg-card); padding: 20px 30px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); text-align: center; transition: all var(--transition);" class="hover-glow">
+                            <i class="fa-solid fa-server" style="font-size: 2rem; color: var(--accent); margin-bottom: 10px;"></i>
+                            <h4 style="color: var(--text-primary); margin-bottom: 5px;">Any Scale</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">From Startups to Enterprise</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services reveal" id="services">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Capabilities</span>
@@ -978,7 +1069,7 @@
         </div>
     </section>
 
-    <section class="portfolio" id="portfolio">
+    <section class="portfolio reveal" id="portfolio">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Limitless Capabilities</span>
@@ -1233,6 +1324,26 @@
 
         hamburger.addEventListener('click', toggleMobileMenu);
         mobileLinks.forEach(link => link.addEventListener('click', toggleMobileMenu));
+
+        
+        // Scroll Reveal Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, .service-card, .portfolio-card, .contact-card, .contact-form, .hover-glow').forEach(el => {
+            el.classList.add('reveal');
+            observer.observe(el);
+        });
 
         // Automatic Dynamic Numeric Counters
         const counters = document.querySelectorAll('.count');
