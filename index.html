@@ -1025,7 +1025,7 @@
 
     <nav class="navbar" id="navbar">
         <div class="container">
-            <a href="index.html" class="nav-logo">Vaishnavi<span>Crafter</span></a>
+            <a href="index.html" class="nav-logo" style="text-transform: none;">Vaishnavi<span style="text-transform: none; color: var(--accent);">.dev</span></a>
             <div class="nav-links" id="mainNav">
                 <a href="#hero" class="active">Home</a>
                 <a href="#services">Services</a>
@@ -1052,10 +1052,11 @@
         <a href="#contact" class="mobile-link">Contact</a>
     </div>
 
-    <section class="hero reveal" id="hero">
-        <div class="container">
-            <div class="hero-badge">
-                <i class="fa-solid fa-circle"></i> Available for New Projects 🚀
+    <section class="hero reveal" id="hero" style="position: relative; overflow: hidden;">
+        <div class="hero-bg-glow"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="status-indicator">
+                <span class="pulse-dot"></span> Accepting New Projects
             </div>
             <h1 class="hero-title">
                 We Build High-End<br><span class="gradient-text">Digital Products</span> Perfectly
