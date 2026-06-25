@@ -164,12 +164,12 @@ create_page('about.html', 'About Us', about_content)
 
 # 5. Services & 6. Portfolio & 7. Contact (I will extract these from index_html so they mirror the homepage but standalone)
 def extract_section(section_id):
-    pattern = f'<section class=".*?{section_id}.*?".*?</section>'
+    pattern = f'<section class="[^"]*{section_id}[^"]*".*?</section>'
     match = re.search(pattern, index_html, flags=re.DOTALL)
     if match:
         return match.group(0)
     # Contact is a bit different
-    pattern_contact = r'<section class=".*?contact.*?".*?</section>'
+    pattern_contact = r'<section class="[^"]*contact[^"]*".*?</section>'
     match = re.search(pattern_contact, index_html, flags=re.DOTALL)
     if match: return match.group(0)
     return ""

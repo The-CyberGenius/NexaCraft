@@ -1371,61 +1371,152 @@
             <h1 class="section-title" style="font-size: clamp(2.5rem, 5vw, 4rem);">Our Portfolio</h1>
         </div>
     </section>
-    <section class="hero-premium" id="hero">
-        <div class="hero-premium-bg">
-            <svg class="data-network" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="var(--accent)" stop-opacity="0" />
-                        <stop offset="50%" stop-color="var(--accent)" stop-opacity="0.8" />
-                        <stop offset="100%" stop-color="#fff" stop-opacity="0" />
-                    </linearGradient>
-                    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                        <feGaussianBlur stdDeviation="15" result="blur" />
-                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                    </filter>
-                </defs>
-                <g class="network-lines" stroke="url(#lineGrad)" stroke-width="2" fill="none">
-                    <path class="flow-line delay-1" d="M100,800 C300,800 400,200 800,100" />
-                    <path class="flow-line delay-2" d="M50,500 C400,600 500,400 900,400" />
-                    <path class="flow-line delay-3" d="M200,900 C500,800 600,600 850,700" />
-                    <path class="flow-line delay-4" d="M0,300 C300,200 600,700 1000,500" />
-                    <path class="flow-line delay-5" d="M-100,100 C200,300 400,900 700,900" />
-                </g>
-                <g class="network-nodes" fill="var(--text-primary)" filter="url(#glow)">
-                    <circle cx="400" cy="200" r="4" class="pulse-node" />
-                    <circle cx="500" cy="400" r="6" class="pulse-node delay-2" />
-                    <circle cx="600" cy="600" r="3" class="pulse-node delay-1" />
-                    <circle cx="800" cy="100" r="5" class="pulse-node delay-3" />
-                    <circle cx="900" cy="400" r="4" class="pulse-node delay-5" />
-                    <circle cx="850" cy="700" r="7" class="pulse-node delay-4" />
-                </g>
-            </svg>
-        </div>
-        
-        <div class="particles" id="particles"></div>
-
-        <div class="container hero-premium-container">
-            <div class="hero-premium-content">
-                
-                <h1 class="hero-premium-title fade-in-up delay-2">
-                    Premium Websites <br>
-                    <span class="text-mask">For Modern</span><br>
-                    Businesses.
-                </h1>
-                <p class="hero-premium-desc fade-in-up delay-3">
-                    We design and build fast, beautiful, and highly professional websites that help your business grow and stand out online.
-                </p>
-                <div class="hero-premium-actions fade-in-up delay-4">
-                    <a href="contact.html" class="btn-magnetic premium-btn-primary">
-                        <span class="btn-text">Start Your Project</span>
-                        <div class="btn-glare"></div>
-                    </a>
-                    <a href="portfolio.html" class="premium-btn-secondary">
-                        <i class="fa-solid fa-play"></i> View Our Work
-                    </a>
+    <section class="portfolio reveal" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Limitless Capabilities</span>
+                <h2 class="section-title">We Can Build Anything. Any Level.</h2>
+                <p>From simple digital presence to advanced corporate platforms, our technical expertise knows no limits. Just contact us with your idea, and we will make it professionally real.</p>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Project 1: Restaurant -->
+                <div class="portfolio-card">
+                    <div class="portfolio-visual">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Gourmet Restro & Bar</h3>
+                        <p>A premium restaurant website with interactive digital menus and seamless table reservation system.</p>
+                        <div class="portfolio-tags"><span>Next.js</span><span>TailwindCSS</span><span>Stripe</span></div>
+                    </div>
+                </div>
+                <!-- Project 2: Business -->
+                <div class="portfolio-card">
+                    <div class="portfolio-visual">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Corporate Office">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Apex Corporate Solutions</h3>
+                        <p>Modern corporate landing page showcasing business services, client testimonials, and a custom CRM dashboard.</p>
+                        <div class="portfolio-tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+                    </div>
+                </div>
+                <!-- Project 3: Showroom -->
+                <div class="portfolio-card">
+                    <div class="portfolio-visual">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80" alt="Luxury Car Showroom">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Luxe Auto Showroom</h3>
+                        <p>High-end automobile showroom platform featuring 3D vehicle tours and financing calculators.</p>
+                        <div class="portfolio-tags"><span>Three.js</span><span>Vue.js</span><span>GSAP</span></div>
+                    </div>
+                </div>
+                <!-- Project 4: Property -->
+                <div class="portfolio-card">
+                    <div class="portfolio-visual">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Luxury Property">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Prime Property Estates</h3>
+                        <p>Real estate listing platform with advanced map-based search, property virtual tours, and agent portals.</p>
+                        <div class="portfolio-tags"><span>Angular</span><span>Google Maps</span><span>Firebase</span></div>
+                    </div>
+                </div>
+                <!-- Project 5: E-Commerce -->
+                <div class="portfolio-card">
+                    <div class="portfolio-visual">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="E-Commerce Digital Store">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Digital E-Commerce Hub</h3>
+                        <p>Fully optimized online store with secure payment gateways and inventory management dashboard.</p>
+                        <div class="portfolio-tags"><span>Shopify/Custom</span><span>Cart System</span></div>
+                    </div>
+                </div>
+                <!-- Project 6: EdTech -->
+                <div class="portfolio-card">
+                    <div class="portfolio-visual">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="EdTech Learning Platform">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>EdTech Learning Portal</h3>
+                        <p>Interactive educational platform with video streaming, student progress tracking, and quizzes.</p>
+                        <div class="portfolio-tags"><span>LMS</span><span>Video Tech</span></div>
+                    </div>
+                </div>
+                <!-- Project 7: Travel -->
+                <div class="portfolio-card">
+                    <div class="portfolio-visual">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80" alt="Travel Booking">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Wanderlust Travel Booking</h3>
+                        <p>Dynamic travel agency portal featuring live flight/hotel API integrations and custom itineraries.</p>
+                        <div class="portfolio-tags"><span>Booking APIs</span><span>React</span></div>
+                    </div>
+                </div>
+                <!-- Project 8: Fitness -->
+                <div class="portfolio-card">
+                    <div class="portfolio-visual">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Fitness Center">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Elite Gym & Fitness</h3>
+                        <p>High-energy fitness website offering online coaching, membership subscriptions, and class scheduling.</p>
+                        <div class="portfolio-tags"><span>Subscriptions</span><span>Scheduling</span></div>
+                    </div>
                 </div>
             </div>
+            <!-- WhatsApp CTA Banner - Typewriter -->
+            <div style="text-align: center; margin-top: 100px; padding: 40px 20px; border-top: 1px solid var(--border-color);">
+                <h3 style="font-size: clamp(2rem, 5vw, 3rem); color: var(--text-primary); font-weight: 800; margin-bottom: 20px; display: inline-block; position: relative;">
+                    <span id="typewriter-text" style="border-right: 3px solid var(--accent); padding-right: 5px;"></span>
+                </h3>
+                <p id="cta-desc" style="color: var(--text-secondary); margin-bottom: 40px; font-size: 1.2rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6; opacity: 0; transform: translateY(20px); transition: all 0.8s ease;">
+                    Apne business ke liye custom, professional aur fast website banwaye. Let's engineer something amazing together.
+                </p>
+                <a id="cta-btn" href="https://wa.me/918368435458?text=Hello%20Vaishnavi%20Web%20Crafter,%20I%20want%20to%20build%20a%20website" target="_blank" class="btn" style="display: inline-flex; align-items: center; gap: 12px; font-size: 1.1rem; padding: 16px 45px; background: transparent; color: var(--text-primary); border: 2px solid var(--text-primary); border-radius: 50px; transition: all 0.5s ease; font-weight: 600; opacity: 0; transform: translateY(20px);" onmouseover="this.style.background='var(--text-primary)'; this.style.color='var(--bg-primary)';" onmouseout="this.style.background='transparent'; this.style.color='var(--text-primary)';">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i> Start a Project
+                </a>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const text = "Apni Website Banwani Ho?";
+                    const element = document.getElementById('typewriter-text');
+                    const ctaDesc = document.getElementById('cta-desc');
+                    const ctaBtn = document.getElementById('cta-btn');
+                    let i = 0;
+                    
+                    setInterval(() => {
+                        element.style.borderColor = element.style.borderColor === 'transparent' ? 'var(--accent)' : 'transparent';
+                    }, 500);
+
+                    function typeWriter() {
+                        if (i < text.length) {
+                            element.innerHTML += text.charAt(i);
+                            i++;
+                            setTimeout(typeWriter, 100); // typing speed
+                        } else {
+                            // After typing finishes, reveal the description and button smoothly
+                            setTimeout(() => {
+                                ctaDesc.style.opacity = '1';
+                                ctaDesc.style.transform = 'translateY(0)';
+                                ctaBtn.style.opacity = '1';
+                                ctaBtn.style.transform = 'translateY(0)';
+                            }, 200);
+                        }
+                    }
+                    
+                    const observer = new IntersectionObserver((entries) => {
+                        if (entries[0].isIntersecting && i === 0) {
+                            typeWriter();
+                        }
+                    }, { threshold: 0.5 });
+                    observer.observe(element);
+                });
+            </script>
         </div>
     </section>
 
