@@ -1010,7 +1010,272 @@
                 transition: transform 0.1s ease !important;
             }
         }
-    </style>
+    
+        /* =========================================
+           ULTRA PREMIUM HERO OVERHAUL 
+           ========================================= */
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color var(--transition), color var(--transition);
+        }
+
+        h1, h2, h3, h4, h5, h6, .hero-title, .section-title {
+            font-family: var(--font-heading);
+            letter-spacing: -0.03em;
+        }
+
+        .nav-logo span, .status-indicator, .portfolio-tags span, .section-label, .hero-stat .number, .code-snippet {
+            font-family: var(--font-mono);
+            letter-spacing: -0.02em;
+        }
+        
+        .nav-logo {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            letter-spacing: -0.05em;
+        }
+
+        /* Glass Cards with Glow */
+        .service-card, .portfolio-card {
+            background: rgba(255, 255, 255, 0.02) !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        [data-theme="light"] .service-card, [data-theme="light"] .portfolio-card {
+            background: rgba(255, 255, 255, 0.6) !important;
+            border: 1px solid rgba(0, 0, 0, 0.05) !important;
+        }
+
+        .service-card:hover, .portfolio-card:hover {
+            border-color: var(--accent) !important;
+            box-shadow: 0 0 20px rgba(41, 112, 255, 0.15), inset 0 0 10px rgba(41, 112, 255, 0.05) !important;
+        }
+
+        .hero-premium {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 60px;
+            background: #000;
+            overflow: hidden;
+            color: #fff;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .hero-premium::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle 800px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.04), transparent 50%);
+            z-index: 1;
+            pointer-events: none;
+            transition: background 0.1s ease;
+        }
+
+        .hero-premium-bg {
+            position: absolute;
+            top: 0; right: -10%;
+            width: 80%; height: 100%;
+            z-index: 0;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        .data-network {
+            width: 100%; height: 100%;
+            transform: perspective(1000px) rotateY(-15deg) scale(1.2);
+        }
+
+        .flow-line {
+            stroke-dasharray: 2000;
+            stroke-dashoffset: 2000;
+            animation: dashFlow 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes dashFlow {
+            0% { stroke-dashoffset: 2000; }
+            50% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: -2000; }
+        }
+
+        .pulse-node {
+            animation: nodePulse 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes nodePulse {
+            0% { transform: scale(0.8); opacity: 0.3; }
+            100% { transform: scale(1.5); opacity: 1; }
+        }
+
+        .delay-1 { animation-delay: 0.5s; }
+        .delay-2 { animation-delay: 1.2s; }
+        .delay-3 { animation-delay: 2.1s; }
+        .delay-4 { animation-delay: 2.8s; }
+        .delay-5 { animation-delay: 3.5s; }
+
+        .particles {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-premium-container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .hero-premium-content {
+            max-width: 800px;
+        }
+
+        .premium-status {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 100px;
+            display: inline-flex;
+            backdrop-filter: blur(10px);
+            margin-bottom: 40px;
+        }
+
+        .status-text {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .hero-premium-title {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+            margin-bottom: 30px;
+            text-transform: capitalize;
+        }
+
+        .text-mask {
+            background: linear-gradient(135deg, #fff 0%, #666 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .hero-premium-desc {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 600px;
+            margin-bottom: 50px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .hero-premium-actions {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .btn-magnetic {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 40px;
+            background: #fff;
+            color: #000;
+            font-family: var(--font-main);
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-radius: 100px;
+            text-decoration: none;
+            overflow: hidden;
+            transition: transform 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+            will-change: transform;
+        }
+
+        .btn-text {
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn-glare {
+            position: absolute;
+            top: 0; left: -100%;
+            width: 50%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+            transform: skewX(-20deg);
+            z-index: 1;
+            transition: 0.5s;
+        }
+
+        .btn-magnetic:hover .btn-glare {
+            left: 200%;
+        }
+
+        .premium-btn-secondary {
+            color: #fff;
+            text-decoration: none;
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .premium-btn-secondary i {
+            font-size: 0.8rem;
+            background: rgba(255,255,255,0.1);
+            width: 32px; height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .premium-btn-secondary:hover {
+            color: var(--accent);
+        }
+
+        .premium-btn-secondary:hover i {
+            transform: scale(1.1);
+            background: rgba(255,255,255,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .hero-premium {
+                padding: 160px 0 80px;
+                text-align: center;
+            }
+            .hero-premium-bg {
+                top: auto; bottom: 0;
+                right: 0; width: 100%; height: 60%;
+                opacity: 0.3;
+            }
+            .hero-premium-actions {
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+            }
+            .hero-premium-content { margin: 0 auto; }
+            .btn-magnetic { width: 100%; }
+        }
+
+</style>
 </head>
 
 <body>
@@ -1278,6 +1543,54 @@
             });
         }
     </script>
+<script>
+        // Premium Hero JS Logic
+        const hero = document.getElementById('hero');
+        const magneticBtn = document.querySelector('.btn-magnetic');
+
+        if(hero) {
+            // Dynamic Cursor Lighting
+            document.addEventListener('mousemove', (e) => {
+                const x = (e.clientX / window.innerWidth) * 100;
+                const y = (e.clientY / window.innerHeight) * 100;
+                document.documentElement.style.setProperty('--mouse-x', `${x}%`);
+                document.documentElement.style.setProperty('--mouse-y', `${y}%`);
+            });
+
+            // Magnetic Button Physics
+            if(magneticBtn && window.matchMedia("(pointer: fine)").matches) {
+                magneticBtn.addEventListener('mousemove', (e) => {
+                    const rect = magneticBtn.getBoundingClientRect();
+                    const hX = (e.clientX - rect.left) - rect.width / 2;
+                    const hY = (e.clientY - rect.top) - rect.height / 2;
+                    magneticBtn.style.transform = `translate(${hX * 0.2}px, ${hY * 0.2}px) scale(1.05)`;
+                });
+                
+                magneticBtn.addEventListener('mouseleave', () => {
+                    magneticBtn.style.transform = `translate(0px, 0px) scale(1)`;
+                });
+            }
+
+            // Create CSS Particles
+            const particlesContainer = document.getElementById('particles');
+            if(particlesContainer) {
+                for(let i=0; i<30; i++) {
+                    const p = document.createElement('div');
+                    p.style.position = 'absolute';
+                    p.style.width = Math.random() * 3 + 'px';
+                    p.style.height = p.style.width;
+                    p.style.background = 'rgba(255,255,255,0.3)';
+                    p.style.borderRadius = '50%';
+                    p.style.left = Math.random() * 100 + '%';
+                    p.style.top = Math.random() * 100 + '%';
+                    p.style.animation = `float ${Math.random() * 10 + 5}s linear infinite`;
+                    p.style.opacity = Math.random();
+                    particlesContainer.appendChild(p);
+                }
+            }
+        }
+
+</script>
 </body>
 
 </html>
