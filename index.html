@@ -1142,12 +1142,12 @@
     <section class="faq" id="faq">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Faq Portal</span>
-                <h2 class="section-title">Frequently Answered Parameters</h2>
+                <span class="section-label">FAQs</span>
+                <h2 class="section-title">Common Questions</h2>
             </div>
             <div class="faq-list">
                 <div class="faq-item">
-                    <div class="faq-question">What is the estimated deployment cycle? <i
+                    <div class="faq-question">How long does it take to build a website? <i
                             class="fa-solid fa-chevron-down"></i></div>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">Standard structural development systems take approximately 2-4
@@ -1168,34 +1168,39 @@
 
     <section class="contact" id="contact">
         <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+                <span class="section-label">Contact Us</span>
+                <h2 class="section-title">Let's Build Your Dream Website</h2>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 15px auto 0; font-size: 1.1rem; line-height: 1.6;">Ready to take your business online? Fill out the form below or message us directly on WhatsApp to get started.</p>
+            </div>
             <div class="contact-grid">
-                <div class="contact-details">
-                    <h3>Initiate Project Discussion</h3>
-                    <p>Have an explicit framework setup or architecture project requirement? Connect with our engine
-                        leads directly.</p>
-                    <div class="contact-card">
-                        <i class="fa-solid fa-envelope"></i>
-                        <div>
-                            <h4>Direct Email Connection</h4>
-                            <p>contact@vaishnaviwebcrafter.com</p>
-                        </div>
+                <div class="contact-details" style="display: flex; flex-direction: column; gap: 20px;">
+                    <div class="contact-card" style="padding: 30px; background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border-color); text-align: center;">
+                        <i class="fa-brands fa-whatsapp" style="font-size: 3rem; color: #25D366; margin-bottom: 15px;"></i>
+                        <h4 style="font-size: 1.2rem; margin-bottom: 8px;">Chat on WhatsApp</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 15px;">Fastest way to get a response.</p>
+                        <a href="https://wa.me/918368435458?text=Hello%20Vaishnavi%20Web%20Crafter,%20I%20want%20to%20build%20a%20website" target="_blank" style="color: var(--accent); font-weight: 600; text-decoration: none;">+91 8368435458</a>
+                    </div>
+                    <div class="contact-card" style="padding: 30px; background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border-color); text-align: center;">
+                        <i class="fa-solid fa-envelope" style="font-size: 3rem; color: var(--accent); margin-bottom: 15px;"></i>
+                        <h4 style="font-size: 1.2rem; margin-bottom: 8px;">Email Us</h4>
+                        <p style="color: var(--text-secondary); margin-bottom: 15px;">We typically reply within 24 hours.</p>
+                        <a href="mailto:contact@vaishnaviwebcrafter.com" style="color: var(--accent); font-weight: 600; text-decoration: none;">contact@vaishnaviwebcrafter.com</a>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" style="background: var(--bg-card); padding: 40px; border-radius: var(--radius); border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
+                    <h3 style="margin-bottom: 24px; font-size: 1.5rem;">Send a Quick Message</h3>
                     <div class="form-group">
-                        <label for="name">Lead Identifier Name</label>
-                        <input type="text" id="name" required placeholder="John Doe">
+                        <label for="name" style="font-weight: 500;">Your Full Name</label>
+                        <input type="text" id="name" required placeholder="e.g. Rahul Kumar">
                     </div>
                     <div class="form-group">
-                        <label for="email">Data Email Point</label>
-                        <input type="email" id="email" required placeholder="john@company.com">
+                        <label for="msg" style="font-weight: 500;">Tell us about your project</label>
+                        <textarea id="msg" rows="5" required placeholder="I need a website for my restaurant..."></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="msg">Project Scope Brief</label>
-                        <textarea id="msg" rows="4" required placeholder="Describe system details..."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Transmit Signal <i
-                            class="fa-solid fa-paper-plane"></i></button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; display: flex; justify-content: center; align-items: center; gap: 10px; background: #25D366; color: #fff;">
+                        Message on WhatsApp <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i>
+                    </button>
                 </form>
             </div>
         </div>
@@ -1305,17 +1310,15 @@
         // Trigger Counter Animation On Page Display
         setTimeout(triggerCounters, 600);
 
-        // Advanced Form Handler - Redirects directly to WhatsApp
+        // Human-friendly Form Handler - Redirects to WhatsApp
         document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
             const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
             const msg = document.getElementById('msg').value;
-            const text = `Hello Vaishnavi Web Crafter! I want to discuss a project.
+            const text = `Hello Vaishnavi Web Crafter! I want to discuss a new website project.
 
 *Name:* ${name}
-*Email:* ${email}
-*Requirements:* ${msg}`;
+*Project Details:* ${msg}`;
             window.open(`https://wa.me/918368435458?text=${encodeURIComponent(text)}`, '_blank');
             e.target.reset();
         });
