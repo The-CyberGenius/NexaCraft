@@ -303,7 +303,7 @@
         .btn-nav:hover {
             transform: scale(1.05);
             background: var(--accent);
-            color: #fff;
+            color: var(--text-primary);
         }
 
         .hamburger {
@@ -452,7 +452,7 @@
         .btn-primary:hover {
             transform: scale(1.03);
             background: var(--accent);
-            color: #fff;
+            color: var(--text-primary);
         }
 
         .btn-secondary {
@@ -831,7 +831,7 @@
         .contact-form .btn {
             width: 100%;
             background: #25D366;
-            color: #fff;
+            color: var(--text-primary);
         }
         .contact-form .btn:hover {
             background: #1ebc59;
@@ -1064,9 +1064,9 @@
             display: flex;
             align-items: center;
             padding: 120px 0 60px;
-            background: #000;
+            background: var(--bg-primary);
             overflow: hidden;
-            color: #fff;
+            color: var(--text-primary);
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
@@ -1074,7 +1074,7 @@
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle 800px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.04), transparent 50%);
+            background: radial-gradient(circle 800px at var(--mouse-x, 50%) var(--mouse-y, 50%), var(--border-color), transparent 50%);
             z-index: 1;
             pointer-events: none;
             transition: background 0.1s ease;
@@ -1152,7 +1152,7 @@
             font-family: var(--font-mono);
             font-size: 0.85rem;
             letter-spacing: 0.05em;
-            color: rgba(255,255,255,0.8);
+            color: var(--text-secondary);
         }
 
         .hero-premium-title {
@@ -1192,8 +1192,8 @@
             align-items: center;
             justify-content: center;
             padding: 18px 40px;
-            background: #fff;
-            color: #000;
+            background: var(--text-primary);
+            color: var(--bg-primary);
             font-family: var(--font-main);
             font-weight: 600;
             font-size: 1.1rem;
@@ -1213,7 +1213,7 @@
             position: absolute;
             top: 0; left: -100%;
             width: 50%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+            background: linear-gradient(90deg, transparent, var(--text-secondary), transparent);
             transform: skewX(-20deg);
             z-index: 1;
             transition: 0.5s;
@@ -1224,7 +1224,7 @@
         }
 
         .premium-btn-secondary {
-            color: #fff;
+            color: var(--text-primary);
             text-decoration: none;
             font-family: var(--font-mono);
             font-size: 0.95rem;
@@ -1273,6 +1273,16 @@
             }
             .hero-premium-content { margin: 0 auto; }
             .btn-magnetic { width: 100%; }
+        }
+
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
 </style>

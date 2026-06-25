@@ -303,7 +303,7 @@
         .btn-nav:hover {
             transform: scale(1.05);
             background: var(--accent);
-            color: #fff;
+            color: var(--text-primary);
         }
 
         .hamburger {
@@ -452,7 +452,7 @@
         .btn-primary:hover {
             transform: scale(1.03);
             background: var(--accent);
-            color: #fff;
+            color: var(--text-primary);
         }
 
         .btn-secondary {
@@ -831,7 +831,7 @@
         .contact-form .btn {
             width: 100%;
             background: #25D366;
-            color: #fff;
+            color: var(--text-primary);
         }
         .contact-form .btn:hover {
             background: #1ebc59;
@@ -1064,9 +1064,9 @@
             display: flex;
             align-items: center;
             padding: 120px 0 60px;
-            background: #000;
+            background: var(--bg-primary);
             overflow: hidden;
-            color: #fff;
+            color: var(--text-primary);
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
@@ -1074,7 +1074,7 @@
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle 800px at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.04), transparent 50%);
+            background: radial-gradient(circle 800px at var(--mouse-x, 50%) var(--mouse-y, 50%), var(--border-color), transparent 50%);
             z-index: 1;
             pointer-events: none;
             transition: background 0.1s ease;
@@ -1152,7 +1152,7 @@
             font-family: var(--font-mono);
             font-size: 0.85rem;
             letter-spacing: 0.05em;
-            color: rgba(255,255,255,0.8);
+            color: var(--text-secondary);
         }
 
         .hero-premium-title {
@@ -1192,8 +1192,8 @@
             align-items: center;
             justify-content: center;
             padding: 18px 40px;
-            background: #fff;
-            color: #000;
+            background: var(--text-primary);
+            color: var(--bg-primary);
             font-family: var(--font-main);
             font-weight: 600;
             font-size: 1.1rem;
@@ -1213,7 +1213,7 @@
             position: absolute;
             top: 0; left: -100%;
             width: 50%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+            background: linear-gradient(90deg, transparent, var(--text-secondary), transparent);
             transform: skewX(-20deg);
             z-index: 1;
             transition: 0.5s;
@@ -1224,7 +1224,7 @@
         }
 
         .premium-btn-secondary {
-            color: #fff;
+            color: var(--text-primary);
             text-decoration: none;
             font-family: var(--font-mono);
             font-size: 0.95rem;
@@ -1273,6 +1273,16 @@
             }
             .hero-premium-content { margin: 0 auto; }
             .btn-magnetic { width: 100%; }
+        }
+
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
 </style>
@@ -1344,7 +1354,7 @@
                     <path class="flow-line delay-4" d="M0,300 C300,200 600,700 1000,500" />
                     <path class="flow-line delay-5" d="M-100,100 C200,300 400,900 700,900" />
                 </g>
-                <g class="network-nodes" fill="#fff" filter="url(#glow)">
+                <g class="network-nodes" fill="var(--text-primary)" filter="url(#glow)">
                     <circle cx="400" cy="200" r="4" class="pulse-node" />
                     <circle cx="500" cy="400" r="6" class="pulse-node delay-2" />
                     <circle cx="600" cy="600" r="3" class="pulse-node delay-1" />
@@ -1359,19 +1369,19 @@
 
         <div class="container hero-premium-container">
             <div class="hero-premium-content">
-                <div class="status-indicator premium-status reveal">
+                <div class="status-indicator premium-status fade-in-up delay-1">
                     <span class="pulse-dot"></span> <span class="status-text">Systems Online &middot; Accepting Projects</span>
                 </div>
-                <h1 class="hero-premium-title reveal delay-1">
+                <h1 class="hero-premium-title fade-in-up delay-2">
                     Engineering <br>
                     <span class="text-mask">Unreasonable</span><br>
                     Excellence.
                 </h1>
-                <p class="hero-premium-desc reveal delay-2">
+                <p class="hero-premium-desc fade-in-up delay-3">
                     We build high-performance software, cutting-edge interfaces, and scalable architectures. 
                     Not just code. <span style="color: var(--text-primary);">Digital Masterpieces.</span>
                 </p>
-                <div class="hero-premium-actions reveal delay-3">
+                <div class="hero-premium-actions fade-in-up delay-4">
                     <a href="#contact" class="btn-magnetic premium-btn-primary">
                         <span class="btn-text">Initialize Project</span>
                         <div class="btn-glare"></div>
@@ -1408,7 +1418,7 @@
             <div class="about-grid" style="display: grid; gap: 60px; align-items: center;">
                 <div class="about-image" style="position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg);">
                     <img src="assets/team.png" alt="Vaishnavi and the Elite Tech Team" style="width: 100%; height: auto; display: block; transform: scale(1.02); transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1.02)'">
-                    <div style="position: absolute; bottom: 20px; left: 20px; background: rgba(0,0,0,0.6); backdrop-filter: blur(10px); padding: 10px 20px; border-radius: 50px; color: #fff; font-weight: 600; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.2);">
+                    <div style="position: absolute; bottom: 20px; left: 20px; background: rgba(0,0,0,0.6); backdrop-filter: blur(10px); padding: 10px 20px; border-radius: 50px; color: var(--text-primary); font-weight: 600; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.2);">
                         <i class="fa-solid fa-users" style="color: #25D366; margin-right: 8px;"></i> A Real Team, Real Results
                     </div>
                 </div>
