@@ -964,7 +964,7 @@
     <section class="hero reveal" id="hero">
         <div class="container">
             <div class="hero-badge">
-                <i class="fa-solid fa-circle"></i> Available for Custom Web Framework Design
+                <i class="fa-solid fa-circle"></i> Available for New Projects 🚀
             </div>
             <h1 class="hero-title">
                 We Build High-End<br><span class="gradient-text">Digital Products</span> Perfectly
@@ -1054,7 +1054,7 @@
                 <span class="section-label">Capabilities</span>
                 <h2 class="section-title">Engines & Specialized Services</h2>
             </div>
-            <div class="services-grid">
+            <div class="service-grid">
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-code"></i></div>
                     <h3>Full Stack Engineering</h3>
@@ -1179,10 +1179,10 @@
                 <h3 style="font-size: clamp(2rem, 5vw, 3rem); color: var(--text-primary); font-weight: 800; margin-bottom: 20px; display: inline-block; position: relative;">
                     <span id="typewriter-text" style="border-right: 3px solid var(--accent); padding-right: 5px;"></span>
                 </h3>
-                <p style="color: var(--text-secondary); margin-bottom: 40px; font-size: 1.2rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                <p id="cta-desc" style="color: var(--text-secondary); margin-bottom: 40px; font-size: 1.2rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6; opacity: 0; transform: translateY(20px); transition: all 0.8s ease;">
                     Apne business ke liye custom, professional aur fast website banwaye. Let's engineer something amazing together.
                 </p>
-                <a href="https://wa.me/918368435458?text=Hello%20Vaishnavi%20Web%20Crafter,%20I%20want%20to%20build%20a%20website" target="_blank" class="btn" style="display: inline-flex; align-items: center; gap: 12px; font-size: 1.1rem; padding: 16px 45px; background: transparent; color: var(--text-primary); border: 2px solid var(--text-primary); border-radius: 50px; transition: all 0.3s ease; font-weight: 600;" onmouseover="this.style.background='var(--text-primary)'; this.style.color='var(--bg-primary)';" onmouseout="this.style.background='transparent'; this.style.color='var(--text-primary)';">
+                <a id="cta-btn" href="https://wa.me/918368435458?text=Hello%20Vaishnavi%20Web%20Crafter,%20I%20want%20to%20build%20a%20website" target="_blank" class="btn" style="display: inline-flex; align-items: center; gap: 12px; font-size: 1.1rem; padding: 16px 45px; background: transparent; color: var(--text-primary); border: 2px solid var(--text-primary); border-radius: 50px; transition: all 0.5s ease; font-weight: 600; opacity: 0; transform: translateY(20px);" onmouseover="this.style.background='var(--text-primary)'; this.style.color='var(--bg-primary)';" onmouseout="this.style.background='transparent'; this.style.color='var(--text-primary)';">
                     <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i> Start a Project
                 </a>
             </div>
@@ -1191,9 +1191,10 @@
                 document.addEventListener('DOMContentLoaded', () => {
                     const text = "Apni Website Banwani Ho?";
                     const element = document.getElementById('typewriter-text');
+                    const ctaDesc = document.getElementById('cta-desc');
+                    const ctaBtn = document.getElementById('cta-btn');
                     let i = 0;
                     
-                    // Simple blinking cursor via CSS is better, but we do typing via JS
                     setInterval(() => {
                         element.style.borderColor = element.style.borderColor === 'transparent' ? 'var(--accent)' : 'transparent';
                     }, 500);
@@ -1204,15 +1205,16 @@
                             i++;
                             setTimeout(typeWriter, 100); // typing speed
                         } else {
+                            // After typing finishes, reveal the description and button smoothly
                             setTimeout(() => {
-                                element.innerHTML = "";
-                                i = 0;
-                                typeWriter();
-                            }, 5000); // wait before repeating
+                                ctaDesc.style.opacity = '1';
+                                ctaDesc.style.transform = 'translateY(0)';
+                                ctaBtn.style.opacity = '1';
+                                ctaBtn.style.transform = 'translateY(0)';
+                            }, 200);
                         }
                     }
                     
-                    // Trigger when in view using IntersectionObserver
                     const observer = new IntersectionObserver((entries) => {
                         if (entries[0].isIntersecting && i === 0) {
                             typeWriter();
