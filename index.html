@@ -900,6 +900,10 @@
         @keyframes spin { to { transform: rotate(360deg); } }
 
         /* Responsive Layouts */
+        @media (min-width: 992px) {
+            .about-grid { grid-template-columns: 1fr 1fr; }
+        }
+
         @media (max-width: 992px) {
             .contact-grid {
                 grid-template-columns: 1fr;
@@ -1013,26 +1017,30 @@
 
     <section class="about reveal" id="about" style="background: var(--bg-primary); padding: 100px 0; border-bottom: 1px solid var(--border-color);">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr; gap: 60px; align-items: center;">
-                <div class="about-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
-                    <div class="section-label" style="display: inline-flex; justify-content: center; margin-bottom: 15px;">Meet The Engine</div>
-                    <h2 class="section-title" style="margin-bottom: 24px;">Vaishnavi & The Elite Tech Team</h2>
+            <div class="about-grid" style="display: grid; gap: 60px; align-items: center;">
+                <div class="about-image" style="position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg);">
+                    <img src="assets/team.png" alt="Vaishnavi and the Elite Tech Team" style="width: 100%; height: auto; display: block; transform: scale(1.02); transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1.02)'">
+                    <div style="position: absolute; bottom: 20px; left: 20px; background: rgba(0,0,0,0.6); backdrop-filter: blur(10px); padding: 10px 20px; border-radius: 50px; color: #fff; font-weight: 600; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.2);">
+                        <i class="fa-solid fa-users" style="color: #25D366; margin-right: 8px;"></i> A Real Team, Real Results
+                    </div>
+                </div>
+                <div class="about-content" style="max-width: 600px;">
+                    <div class="section-label" style="display: inline-flex; margin-bottom: 15px;">Meet The Team</div>
+                    <h2 class="section-title" style="margin-bottom: 24px; font-size: clamp(2rem, 4vw, 2.5rem);">Hi, I'm Vaishnavi! 👋</h2>
+                    <p style="color: var(--text-secondary); font-size: 1.15rem; line-height: 1.7; margin-bottom: 20px;">
+                        I believe that behind every great digital experience is a dedicated team of real people. My elite team of developers and designers doesn't just write code—we craft solutions with care, passion, and precision.
+                    </p>
                     <p style="color: var(--text-secondary); font-size: 1.15rem; line-height: 1.7; margin-bottom: 30px;">
-                        Behind every great digital experience is a dedicated team of elite developers and system architects. Led by <strong>Vaishnavi</strong>, our tech team doesn't just write code—we engineer scalable, high-end digital products.
+                        Whether you need a simple landing page or a complex corporate web application, we have the technical firepower to bring your vision to life. <strong style="color: var(--text-primary);">Let's build something amazing together.</strong>
                     </p>
-                    <p style="color: var(--text-secondary); font-size: 1.15rem; line-height: 1.7; margin-bottom: 40px;">
-                        Whether you need a simple landing page, a complex corporate web application, or a fully functional e-commerce ecosystem, we have the technical firepower to build exactly what you imagine. <strong style="color: var(--text-primary);">You dream it, we build it.</strong>
-                    </p>
-                    <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
-                        <div style="background: var(--bg-card); padding: 20px 30px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); text-align: center; transition: all var(--transition);" class="hover-glow">
-                            <i class="fa-solid fa-laptop-code" style="font-size: 2rem; color: var(--accent); margin-bottom: 10px;"></i>
-                            <h4 style="color: var(--text-primary); margin-bottom: 5px;">Any Tech Stack</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem;">React, Node, Python & More</p>
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 12px; background: var(--bg-card); padding: 12px 20px; border-radius: var(--radius-full); border: 1px solid var(--border-color);">
+                            <i class="fa-solid fa-laptop-code" style="color: var(--accent); font-size: 1.2rem;"></i>
+                            <span style="font-weight: 600; font-size: 0.95rem;">Any Tech Stack</span>
                         </div>
-                        <div style="background: var(--bg-card); padding: 20px 30px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); text-align: center; transition: all var(--transition);" class="hover-glow">
-                            <i class="fa-solid fa-server" style="font-size: 2rem; color: var(--accent); margin-bottom: 10px;"></i>
-                            <h4 style="color: var(--text-primary); margin-bottom: 5px;">Any Scale</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.9rem;">From Startups to Enterprise</p>
+                        <div style="display: flex; align-items: center; gap: 12px; background: var(--bg-card); padding: 12px 20px; border-radius: var(--radius-full); border: 1px solid var(--border-color);">
+                            <i class="fa-solid fa-handshake" style="color: #25D366; font-size: 1.2rem;"></i>
+                            <span style="font-weight: 600; font-size: 0.95rem;">100% Trusted</span>
                         </div>
                     </div>
                 </div>
