@@ -214,24 +214,35 @@
            ============================================ */
         .navbar {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: var(--nav-height);
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 900px;
+            height: 60px;
             z-index: 1000;
             display: flex;
             align-items: center;
-            background: var(--navbar-bg);
+            background: rgba(255, 255, 255, 0.02);
             backdrop-filter: saturate(180%) blur(20px);
             -webkit-backdrop-filter: saturate(180%) blur(20px);
-            border-bottom: 1px solid var(--border-color);
-            transition: all var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 50px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        [data-theme="light"] .navbar {
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
 
         .navbar .container {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            width: 100%;
+            padding: 0 20px;
         }
 
         .nav-logo {
@@ -251,16 +262,42 @@
             gap: 32px;
         }
 
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
         .nav-links a {
             font-size: 0.9rem;
             font-weight: 500;
             color: var(--text-secondary);
-            transition: color 0.2s ease;
+            padding: 8px 18px;
+            border-radius: 40px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            z-index: 1;
+            background: transparent;
         }
 
         .nav-links a:hover,
         .nav-links a.active {
             color: var(--text-primary);
+            background: rgba(255,255,255,0.05);
+            /* Water Drop morph effect */
+            border-radius: 20px 40px 20px 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1), inset 0 2px 5px rgba(255,255,255,0.05);
+        }
+        
+        [data-theme="light"] .nav-links a:hover,
+        [data-theme="light"] .nav-links a.active {
+            background: rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05), inset 0 2px 5px rgba(255,255,255,0.5);
+        }
+
+        .nav-links a:active {
+            transform: scale(0.9) scaleY(1.1); /* Squish like water */
+            border-radius: 50px 20px 50px 20px;
         }
 
         .nav-actions {
