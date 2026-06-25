@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexaCraft Agency — We Build Digital Excellence</title>
+    <title>Vaishnavi Web Crafter - Professional Website & Digital Branding</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🌐</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* ============================================
@@ -594,8 +595,18 @@
            ============================================ */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(1, 1fr);
             gap: 24px;
+        }
+        @media (min-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1200px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
         }
 
         .portfolio-card {
@@ -1021,14 +1032,15 @@
     <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Case Archives</span>
-                <h2 class="section-title">Selected Native Solutions</h2>
+                <span class="section-label">Limitless Capabilities</span>
+                <h2 class="section-title">We Can Build Anything. Any Level.</h2>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 15px auto 0; font-size: 1.1rem; line-height: 1.6;">From simple digital presence to advanced corporate platforms, our technical expertise knows no limits. Just contact us with your idea, and we will make it professionally real.</p>
             </div>
             <div class="portfolio-grid">
                 <!-- Project 1: Restaurant -->
                 <div class="portfolio-card">
                     <div class="portfolio-visual">
-                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior">
                     </div>
                     <div class="portfolio-info">
                         <h3>Gourmet Restro & Bar</h3>
@@ -1039,7 +1051,7 @@
                 <!-- Project 2: Business -->
                 <div class="portfolio-card">
                     <div class="portfolio-visual">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Corporate Office">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Corporate Office">
                     </div>
                     <div class="portfolio-info">
                         <h3>Apex Corporate Solutions</h3>
@@ -1050,7 +1062,7 @@
                 <!-- Project 3: Showroom -->
                 <div class="portfolio-card">
                     <div class="portfolio-visual">
-                        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80" alt="Luxury Car Showroom">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80" alt="Luxury Car Showroom">
                     </div>
                     <div class="portfolio-info">
                         <h3>Luxe Auto Showroom</h3>
@@ -1061,7 +1073,7 @@
                 <!-- Project 4: Property -->
                 <div class="portfolio-card">
                     <div class="portfolio-visual">
-                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Luxury Property">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Luxury Property">
                     </div>
                     <div class="portfolio-info">
                         <h3>Prime Property Estates</h3>
@@ -1071,11 +1083,56 @@
                 </div>
             </div>
 
+            
+                <!-- Project 5: E-Commerce -->
+                <div class="portfolio-card">
+                    <div class="portfolio-visual">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="E-Commerce Digital Store">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Digital E-Commerce Hub</h3>
+                        <p>Fully optimized online store with secure payment gateways and inventory management dashboard.</p>
+                        <div class="portfolio-tags"><span>Shopify/Custom</span><span>Cart System</span></div>
+                    </div>
+                </div>
+                <!-- Project 6: EdTech -->
+                <div class="portfolio-card">
+                    <div class="portfolio-visual">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="EdTech Learning Platform">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>EdTech Learning Portal</h3>
+                        <p>Interactive educational platform with video streaming, student progress tracking, and quizzes.</p>
+                        <div class="portfolio-tags"><span>LMS</span><span>Video Tech</span></div>
+                    </div>
+                </div>
+                <!-- Project 7: Travel -->
+                <div class="portfolio-card">
+                    <div class="portfolio-visual">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80" alt="Travel Booking">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Wanderlust Travel Booking</h3>
+                        <p>Dynamic travel agency portal featuring live flight/hotel API integrations and custom itineraries.</p>
+                        <div class="portfolio-tags"><span>Booking APIs</span><span>React</span></div>
+                    </div>
+                </div>
+                <!-- Project 8: Fitness -->
+                <div class="portfolio-card">
+                    <div class="portfolio-visual">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Fitness Center">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Elite Gym & Fitness</h3>
+                        <p>High-energy fitness website offering online coaching, membership subscriptions, and class scheduling.</p>
+                        <div class="portfolio-tags"><span>Subscriptions</span><span>Scheduling</span></div>
+                    </div>
+                </div>
             <!-- WhatsApp CTA Banner -->
             <div style="background: linear-gradient(135deg, rgba(37, 211, 102, 0.1), rgba(18, 140, 126, 0.1)); border: 1px solid rgba(37, 211, 102, 0.3); border-radius: 12px; padding: 40px; text-align: center; margin-top: 60px;">
                 <h3 style="font-size: 1.8rem; margin-bottom: 16px; color: #fff;">Apni Website Banwani Ho?</h3>
                 <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 24px; font-size: 1.1rem;">Apne business ke liye custom, professional aur fast website banwaye. Abhi connect karein!</p>
-                <a href="https://wa.me/918368435458" target="_blank" style="background: #25D366; color: #fff; padding: 14px 32px; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);">
+                <a href="https://wa.me/918368435458?text=Hello%20Vaishnavi%20Web%20Crafter,%20I%20want%20to%20build%20a%20professional%20website%20for%20my%20business." target="_blank" style="background: #25D366; color: #fff; padding: 14px 32px; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);">
                     <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i> +91 8368435458
                 </a>
             </div>
@@ -1120,7 +1177,7 @@
                         <i class="fa-solid fa-envelope"></i>
                         <div>
                             <h4>Direct Email Connection</h4>
-                            <p>hello@nexacraft.agency</p>
+                            <p>contact@vaishnaviwebcrafter.com</p>
                         </div>
                     </div>
                 </div>
@@ -1146,11 +1203,11 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 NexaCraft Agency Systems. Optimization Complete.</p>
+            <p>&copy; 2026 Vaishnavi Web Crafter. Optimization Complete.</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-widget" target="_blank" rel="noopener noreferrer"
+    <a href="https://wa.me/918368435458?text=Hello%20Vaishnavi%20Web%20Crafter,%20I%20want%20to%20build%20a%20website" class="whatsapp-widget" target="_blank" rel="noopener noreferrer"
         aria-label="Direct Link to WhatsApp Operations Engine">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
@@ -1248,10 +1305,18 @@
         // Trigger Counter Animation On Page Display
         setTimeout(triggerCounters, 600);
 
-        // Native Form Handler Simulation
+        // Advanced Form Handler - Redirects directly to WhatsApp
         document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Signal Sent successfully! NexaCraft system leads will review your parameters shortly.');
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const msg = document.getElementById('msg').value;
+            const text = `Hello Vaishnavi Web Crafter! I want to discuss a project.
+
+*Name:* ${name}
+*Email:* ${email}
+*Requirements:* ${msg}`;
+            window.open(`https://wa.me/918368435458?text=${encodeURIComponent(text)}`, '_blank');
             e.target.reset();
         });
 
