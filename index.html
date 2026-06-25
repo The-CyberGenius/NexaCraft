@@ -620,6 +620,18 @@
             justify-content: center;
             font-size: 3rem;
             color: rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+        }
+
+        .portfolio-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition);
+        }
+
+        .portfolio-card:hover .portfolio-visual img {
+            transform: scale(1.05);
         }
 
         .portfolio-info {
@@ -1014,8 +1026,10 @@
             </div>
             <div class="portfolio-grid">
                 <!-- Project 1: Restaurant -->
-                <div class="portfolio-card" style="--card-color-1: rgba(239, 68, 68, 0.2); --card-color-2: rgba(185, 28, 28, 0.2); --icon-color: #f87171;">
-                    <div class="portfolio-visual" style="background: linear-gradient(135deg, var(--card-color-1), var(--card-color-2)); color: var(--icon-color); font-size: 3.5rem; opacity: 0.8;"><i class="fa-solid fa-utensils"></i></div>
+                <div class="portfolio-card">
+                    <div class="portfolio-visual">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior">
+                    </div>
                     <div class="portfolio-info">
                         <h3>Gourmet Restro & Bar</h3>
                         <p>A premium restaurant website with interactive digital menus and seamless table reservation system.</p>
@@ -1023,8 +1037,10 @@
                     </div>
                 </div>
                 <!-- Project 2: Business -->
-                <div class="portfolio-card" style="--card-color-1: rgba(59, 130, 246, 0.2); --card-color-2: rgba(29, 78, 216, 0.2); --icon-color: #60a5fa;">
-                    <div class="portfolio-visual" style="background: linear-gradient(135deg, var(--card-color-1), var(--card-color-2)); color: var(--icon-color); font-size: 3.5rem; opacity: 0.8;"><i class="fa-solid fa-briefcase"></i></div>
+                <div class="portfolio-card">
+                    <div class="portfolio-visual">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Corporate Office">
+                    </div>
                     <div class="portfolio-info">
                         <h3>Apex Corporate Solutions</h3>
                         <p>Modern corporate landing page showcasing business services, client testimonials, and a custom CRM dashboard.</p>
@@ -1032,8 +1048,10 @@
                     </div>
                 </div>
                 <!-- Project 3: Showroom -->
-                <div class="portfolio-card" style="--card-color-1: rgba(16, 185, 129, 0.2); --card-color-2: rgba(4, 120, 87, 0.2); --icon-color: #34d399;">
-                    <div class="portfolio-visual" style="background: linear-gradient(135deg, var(--card-color-1), var(--card-color-2)); color: var(--icon-color); font-size: 3.5rem; opacity: 0.8;"><i class="fa-solid fa-car"></i></div>
+                <div class="portfolio-card">
+                    <div class="portfolio-visual">
+                        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80" alt="Luxury Car Showroom">
+                    </div>
                     <div class="portfolio-info">
                         <h3>Luxe Auto Showroom</h3>
                         <p>High-end automobile showroom platform featuring 3D vehicle tours and financing calculators.</p>
@@ -1041,14 +1059,25 @@
                     </div>
                 </div>
                 <!-- Project 4: Property -->
-                <div class="portfolio-card" style="--card-color-1: rgba(139, 92, 246, 0.2); --card-color-2: rgba(109, 40, 217, 0.2); --icon-color: #a78bfa;">
-                    <div class="portfolio-visual" style="background: linear-gradient(135deg, var(--card-color-1), var(--card-color-2)); color: var(--icon-color); font-size: 3.5rem; opacity: 0.8;"><i class="fa-solid fa-house-chimney"></i></div>
+                <div class="portfolio-card">
+                    <div class="portfolio-visual">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Luxury Property">
+                    </div>
                     <div class="portfolio-info">
                         <h3>Prime Property Estates</h3>
                         <p>Real estate listing platform with advanced map-based search, property virtual tours, and agent portals.</p>
                         <div class="portfolio-tags"><span>Angular</span><span>Google Maps</span><span>Firebase</span></div>
                     </div>
                 </div>
+            </div>
+
+            <!-- WhatsApp CTA Banner -->
+            <div style="background: linear-gradient(135deg, rgba(37, 211, 102, 0.1), rgba(18, 140, 126, 0.1)); border: 1px solid rgba(37, 211, 102, 0.3); border-radius: 12px; padding: 40px; text-align: center; margin-top: 60px;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 16px; color: #fff;">Apni Website Banwani Ho?</h3>
+                <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 24px; font-size: 1.1rem;">Apne business ke liye custom, professional aur fast website banwaye. Abhi connect karein!</p>
+                <a href="https://wa.me/918368435458" target="_blank" style="background: #25D366; color: #fff; padding: 14px 32px; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 1.4rem;"></i> +91 8368435458
+                </a>
             </div>
         </div>
     </section>
